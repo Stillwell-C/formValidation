@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+}
+
+.left {
+    flex: 2;
+    height: 100%;
+    background-image: url(assets/money-had.jpg);
+    background-size: cover;
+}
+
+.left-header {
+    margin-top: 8rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+    color: white;
+    text-align: center;
+}
+
+.left-header > h2 {
+    font-size: 2.5rem;
+    margin-bottom: .5rem;
+}
+
+.left-header > h4 {
+    font-size: 1rem;
+}
+
+.right {
+    flex: 3;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.right-top,
+.right-middle,
+.right-bottom {
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.right-top,
+.right-bottom {
+    background-color: #F5F5F5;
+}
+
+.right-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.right-top > p {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-weight: bold;
+    font-size: calc(1rem + .5vh);
+    margin-bottom: 5px;
+}
+
+.right-top > p:nth-child(3) {
+    color: gray;
+}
+
+.bonzalez-lifestyle {
+    text-decoration: underline;
+    color: blue;
+    font-style: italic;
+    cursor: pointer;
+}
+
+.right-top > p:last-child {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.right-middle {
+    display: flex;
+    align-items: center;
+    box-shadow: 4px 4px 6px rgba(20, 20, 20, 0.15);;
+    z-index: 2;
+}
+
+.sign-up-form {
+    margin: 1rem;
+    width: clamp(400px, 80%, 800px);
+}
+
+.form-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: clamp(3px, 5px, 10px);
+}
+
+.form-group > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.sign-up-form label {
+    margin-bottom: 5px;
+}
+
+.sign-up-form input,
+.sign-up-form select {
+    width: 300px;
+    padding: 3px 7px;
+    border-radius: .25rem;
+    outline: none;
+    border: 1px solid #333;
+    max-height: 23px;
+    cursor: pointer;
+}
+
+.sign-up-form input:focus,
+.sign-up-form select:focus {
+    border: 2px solid blue;
+}
+
+.sign-up-form input.success,
+.sign-up-form select.success {
+    border: 2px solid green;
+}
+
+
+.sign-up-form input.failure,
+.sign-up-form select.failure {
+    border: 2px solid red;
+}
+
+.error-div {
+    color: red;
+    font-weight: bold;
+    max-width: 300px;
+}
+
+.password-error-text {
+    color: black;
+    font-size: .7rem;
+    max-width: 300px;
+    white-space: pre;
+}
+
+.radio-buttons {
+    margin: 1rem;
+}
+
+.radio-buttons label {
+    margin-bottom: 5px;
+}
+
+.radio-buttons input {
+    margin-right: .25rem;
+    cursor: pointer;
+}
+
+.submit-div {
+    margin: 1rem;
+}
+
+.submit-div > button {
+    cursor: pointer;
+    background-color: #c00000;
+    padding: 20px 60px;
+    border: 2px solid #c00000;
+    border-radius: .25rem;
+    font-size: 1.5rem;
+    color: white;
+    outline: none;
+}
+
+.submit-div > button:hover {
+    background-image: url(assets/360_F_103829799_z20k7pBsoRHOAKRW2CP8BFhp8v3wcX7R.jpg);
+    background-size: cover;
+    border-color: #85bb65;
+    color: #c00000;
+}
+
+button:hover .button-text{
+    background-color: white;
+    padding: 1px;
+    border-radius: .25rem;
+}
+
+.img-slider-container {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    left: 0%;
+    /* transition: all 200ms ease-in-out; */
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+}
+
+.img-slider-container.active {
+    display: block;
+}
+
+.slider-header {
+    display: flex;
+    margin-top: 2rem;
+    font-size: 3rem;
+    justify-content: center;
+}
+
+.img-slider-close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    cursor: pointer;
+}
+
+.img-slider-close:hover {
+    color: #333;
+}
+
+.slide {
+    position: absolute;
+    list-style: none;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    transition: 300ms opacity ease-in-out;
+    transition-delay: 300ms;
+    width: 700px;
+}
+
+.slide.active {
+    opacity: 1;
+    z-index: 4;
+    transition-delay: 0ms;
+}
+
+.slide img {
+    object-fit: cover;
+    width: 100%;
+    object-position: center;
+}
+
